@@ -1,0 +1,72 @@
+<html>
+    <style>
+        body{
+     background-color: pink;
+
+        }
+
+        .centro{
+            background-color: aqua;
+         margin-bottom: 10%;
+         margin-top: 5%;
+         align-items: center;
+         text-align: center;
+
+        }
+    </style>
+<body>
+
+<div id="menu">
+    <center>
+<p><a href="index.html" onclick="home()" onchange="upperCase()";> Home </a></p>
+<p><a href="#"onclick="cadastrar();"> Cadastro </a></p>
+<p><a href="#" onclick="tarefas();"> tarefas</a></p>
+<p><a href="#"> Sobre </a></p>
+</div>
+<div class="centro" id="centro">
+<div id="tarefas"> <h2>O gato de schrödinger está vivo ou morto?</h2> 
+    <br>
+<input id="caixa" class="texto">
+<button class="botao" onmouseOver="entrar(this)" onmouseOut="sair(this)"> Adicionar </button>
+</div>
+<br>
+<br>
+<br>
+<div id="imagem" onmouseOver="entrar(this)" onmouseOut="sair(this)">
+<img src="gato.png" width="300" height="300">
+</div>
+</div>
+
+</center>
+</body>
+<script>
+
+document.getElementsByClassName("botao")[0].addEventListener("click",
+function (){
+ document.getElementById("caixa").style.color="pink";
+})
+
+document.getElementsByClassName("botao")[0].addEventListener("click", 
+
+function (){
+document.getElementById("caixa").style.fontSize="20px";
+
+})
+
+function entrar(entrar){
+document.getElementsByTagName("img")[0].src="gatov.png";
+}
+
+function sair(sair){
+    document.getElementsByTagName("img")[0].src="gato.png";
+}
+
+
+document.getElementsByTagName("img")[0].addEventListener("click",
+function (){
+    document.getElementsByTagName("img")[0].src="gatom.png";
+}
+)
+
+</script>
+</html>

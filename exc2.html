@@ -1,0 +1,63 @@
+<html>
+    <style>
+        body{
+     background-color: pink;
+
+        }
+
+        .centro{
+            background-color: aqua;
+         margin-bottom: 10%;
+         margin-top: 5%;
+         align-items: center;
+         text-align: center;
+
+        }
+    </style>
+<body>
+
+<div id="menu">
+    <center>
+<p><a href="index.html" onclick="home()" onchange="upperCase()";> Home </a></p>
+<p><a href="#"onclick="cadastrar();"> Cadastro </a></p>
+<p><a href="#" onclick="tarefas();"> tarefas</a></p>
+<p><a href="#"> Sobre </a></p>
+</div>
+<div class="centro" id="centro">
+<div id="tarefas"> <h2>ESCREVA SUA IDADE</h2> 
+    <br>
+<input id="caixa" class="texto">
+<button class="botao" onClick="myFunction()" onmouseOver="entrar(this)" onmouseOut="sair(this)" onchange="upperCase()"> Adicionar </button>
+</div>
+<br>
+<br>
+<br>
+<div id="imagem" onmouseOver="entrar(this)" onmouseOut="sair(this)">
+<img src=".png" width="300" height="300">
+</div>
+</div>
+<P id="um"> </P>
+
+</center>
+</body>
+<script>
+
+function upperCase(){
+    const x = document.getElementById("caixa")[0];
+    x.value = x.value.toUpperCase();
+}
+
+function myfunction(){
+    let x = document.getElementById("tarefas").value;
+    let text;
+    if (isNaN (x) ||  x < 1 || x > 100) {
+   text = "não valido";
+    } else {
+        text = "Idade computada"
+    }
+    document.getElementById("um").innerHTML = text;
+}
+
+
+</script>
+</html>
